@@ -45,8 +45,9 @@
 (load-theme 'comidia t)
 
 ;; set line number color
-(set-face-foreground 'linum "#000")
-(set-face-background 'linum "#ccc")
+(set-face-foreground 'linum "#555")
+(set-face-background 'linum "#000")
+(setq linum-format "%4d \u2502 ")
 
 ;; defines tab size
 (setq default-tab-width 4)
