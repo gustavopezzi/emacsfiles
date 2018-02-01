@@ -35,17 +35,18 @@
 
 ;; defines font family and size
 (custom-set-faces)(defun fontify-frame (frame)
-(set-frame-parameter frame 'font "Hermit-10"))
+(set-frame-parameter frame 'font "Hermit-12"))
 (fontify-frame nil)
 (push 'fontify-frame after-make-frame-functions)
 
 ;; define color theme file
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/borland-blue-theme/") custom-theme-load-path)
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/comidia-theme/") custom-theme-load-path)
-(load-theme 'comidia t)
+(push (substitute-in-file-name "~/.emacs.d/colorthemes/green-screen-theme/") custom-theme-load-path)
+(load-theme 'green-screen t)
 
 ;; set line number color
-(set-face-foreground 'linum "#555")
+(set-face-foreground 'linum "#040")
 (set-face-background 'linum "#000")
 (setq linum-format "%4d \u2502 ")
 
