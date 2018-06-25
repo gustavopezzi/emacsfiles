@@ -16,8 +16,9 @@
 ;; defines custom variables
 (custom-set-variables '(inhibit-startup-screen t))
 
-;; hides menu bar on init
+;; hides menu bar and scrollbar on init
 (hide-menu-scroll-bar)
+(scroll-bar-mode -1)
 
 ;; set truncate lines off
 (set-default 'truncate-lines t)
@@ -28,7 +29,7 @@
 (fontify-frame nil)
 (push 'fontify-frame after-make-frame-functions)
 
-;; define color theme file
+;; define color theme files
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/borland-blue-theme/") custom-theme-load-path)
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/comidia-theme/") custom-theme-load-path)
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/green-screen-theme/") custom-theme-load-path)
