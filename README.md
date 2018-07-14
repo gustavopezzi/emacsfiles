@@ -1,3 +1,4 @@
+```
 C               ctrl key
 M               meta key (alt or esc)
 
@@ -51,3 +52,4 @@ C-x
 C-g             cancel command
 
 C-x-c           exit emacs
+```
