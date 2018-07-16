@@ -7,7 +7,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; list the packages required from melpa repository
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq package-list '(neotree yasnippet-snippets auto-complete))
+(setq package-list '(neotree yasnippet-snippets auto-complete flycheck))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; initialize package module
@@ -38,7 +38,8 @@
 (defun toggle-fullscreen()
  (interactive)
  (when (eq window-system 'x)
-  (set-frame-parameter nil 'fullscreen (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
+  (set-frame-parameter nil 'fullscreen
+   (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 (global-set-key [f11] 'toggle-fullscreen)
 (toggle-fullscreen)
 
@@ -94,7 +95,7 @@
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/borland-blue-theme/") custom-theme-load-path)
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/comidia-theme/") custom-theme-load-path)
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/green-screen-theme/") custom-theme-load-path)
-(load-theme 'comidia t)
+(load-theme 'borland-blue t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; defines font family and size
@@ -181,6 +182,13 @@
 (defun add-semantic-to-autocomplete()
  (add-to-list 'ac-sources 'ac-source-semantic))
 (add-hook 'c-mode-common-hook 'add-semantic-to-autocomplete)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; enable flycheck for realtime syntax check when F9 is pressed
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'flycheck)
+(global-flycheck-mode)
+(global-set-key [f9] 'flycheck-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; disable autosaving and creating backup files
