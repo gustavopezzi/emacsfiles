@@ -44,6 +44,7 @@ C-x u           undo batch changes
 F6              toggle display line numbers
 F7              toggle display invisibles and whitespace
 F8              toggle neotree
+F9              toggle flycheck syntax checker
 F11             toggles fullscreen
 
 C-x C-f         opens a file
@@ -55,7 +56,9 @@ C-x 1           maximize current frame and close all others
 C-x 2           open new frame vertically
 C-x 3           open new frame horizontally
 C-x 0           close current frame
-C-x
+```
+
+```
 C-g             cancel command
 
 C-x-c           exit emacs
