@@ -1,35 +1,4 @@
-;;; borland-blue-theme.el --- Blue/yellow theme based on old DOS Borland/Turbo C IDE
-
-;; Copyright (C) 2015 Alexey Veretennikov
-
-;; Author: Alexey Veretennikov <alexey dot veretennikov at gmail dot com>
-;; Keywords: themes
-;; URL: http://github.com/fourier/borland-blue-theme
-;; Version: 0.1
-;; Package-Requires: ((emacs "24.1"))
-
-;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
-
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-
-;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-;;; Commentary:
-
-;; To use it, put the following in your Emacs configuration file:
-;;
-;;   (load-theme 'borland-blue t)
-;;
-;; Requirements: Emacs 24.
-
-;;; Code:
+;;; borland-blue-theme.el
 
 (deftheme borland-blue
   "This theme resembles the Borland/Turbe C IDE with the general idea as golden letters on a blue background.")
@@ -141,27 +110,6 @@
  '(erc-button ((t (:foreground "cyan" :underline t))))
  )
 
-
-
- ;; '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
- ;; '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
- ;; '(link ((t (:underline (:color foreground-color :style line) :foreground "#8ac6f2"))))
- ;; '(link-visited ((t (:underline (:color foreground-color :style line) :foreground "#e5786d" :inherit (link)))))
- ;; '(fringe ((t (:background "#303030"))))
- ;; '(header-line ((t (:underline (:color foreground-color :style line) :inverse-video nil :foreground "#e7f6da" :background "#303030" :inherit (mode-line)))))
- ;; '(tooltip ((((class color)) (:inherit (variable-pitch) :foreground "black" :background "lightyellow")) (t (:inherit (variable-pitch)))))
- ;; '(mode-line ((t (:box (:line-width -1 :color nil :style released-button) :foreground "#f6f3e8" :background "#444444"))))
- ;; '(mode-line-buffer-id ((t (:weight bold))))
- ;; '(mode-line-emphasis ((t (:weight bold))))
- ;; '(mode-line-highlight ((((class color) (min-colors 88)) (:box (:line-width 2 :color "grey40" :style released-button))) (t (:inherit (highlight)))))
- ;; '(mode-line-inactive ((t (:weight light :box (:line-width -1 :color "grey40" :style nil) :foreground "#857b6f" :background "#444444" :inherit (mode-line)))))
- ;; '(isearch ((t (:foreground "#857b6f" :background "#343434"))))
- ;; '(isearch-fail ((((class color) (min-colors 88) (background light)) (:background "RosyBrown1")) (((class color) (min-colors 88) (background dark)) (:background "red4")) (((class color) (min-colors 16)) (:background "red")) (((class color) (min-colors 8)) (:background "red")) (((class color grayscale)) (:foreground "grey")) (t (:inverse-video t))))
- ;; '(lazy-highlight ((t (:foreground "#a0a8b0" :background "#384048"))))
- ;; '(match ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "RoyalBlue3")) (((class color) (min-colors 8) (background light)) (:foreground "black" :background "yellow")) (((class color) (min-colors 8) (background dark)) (:foreground "white" :background "blue")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "gray"))))
- ;; '(next-error ((t (:inherit (region)))))
- ;; '(query-replace ((t (:inherit (isearch))))))
-
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path)
            load-file-name)
@@ -170,4 +118,3 @@
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'borland-blue)
-;;; borland-blue-theme.el ends here

@@ -92,10 +92,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; define color theme files
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(push (substitute-in-file-name "~/.emacs.d/colorthemes/minimal-theme/") custom-theme-load-path)
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/borland-blue-theme/") custom-theme-load-path)
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/comidia-theme/") custom-theme-load-path)
 (push (substitute-in-file-name "~/.emacs.d/colorthemes/green-screen-theme/") custom-theme-load-path)
-(load-theme 'borland-blue t)
+(push (substitute-in-file-name "~/.emacs.d/colorthemes/forest-green-theme/") custom-theme-load-path)
+(push (substitute-in-file-name "~/.emacs.d/colorthemes/afternoon-theme/") custom-theme-load-path)
+(push (substitute-in-file-name "~/.emacs.d/colorthemes/charcoal-black-theme/") custom-theme-load-path)
+(push (substitute-in-file-name "~/.emacs.d/colorthemes/anti-zenburn-theme/") custom-theme-load-path)
+(load-theme 'minimal t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; defines font family and size

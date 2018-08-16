@@ -1,64 +1,4 @@
-;;; green-screen-theme.el --- A nice color theme for those who miss green CRTs
-
-;; Author: Ricardo Banffy <rbanffy@gmail.com>
-;; Maintainer: Ricardo Banffy <rbanffy@gmail.com>
-;; URL: https://github.com/rbanffy/green-screen-emacs
-;; Package-Version: 20170824.1427
-;; Keywords: faces, theme
-;; Version: 1.0.24
-
-;; Copyright (C) 2017  Ricardo Bánffy
-
-;; This program is free software: you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
-
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-
-;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-;;; Commentary:
-
-;; This package provides a theme that uses various shades of green.
-
-;; Palette for future releases generated with
-;; https://www.tutorialrepublic.com/html-reference/html-color-picker.php
-
-;; #0C1900
-;; #193300
-;; #264C00 -- The darkest we go for foregrounds
-;; #336600
-;; #407F00 -- Dimmed text
-;; #4C9900
-;; #59B200 -- Half-dimmed
-;; #66CC00
-;; #73E500
-;; #80FF00 -- The base green
-;; #8CFF19
-;; #99FF33
-;; #A6FF4C -- Semi bold
-;; #B2FF66
-;; #BFFF7F -- Highlighted/bold text
-;; #CCFF99
-;; #D8FFB2 -- Extra bold
-;; #E5FFCC
-;; #F2FFE5
-
-;; Other named greens
-;; light green
-;; pale green
-;; dark green
-;; green1
-;; green2
-;; green3
-;; green4
-
-;;; Code:
+;;; green-screen-theme.el
 
 (deftheme green-screen
   "A nice color theme for those who miss green CRTs")
@@ -140,4 +80,3 @@
  '(fci-rule-color "dark green"))
 
 (provide-theme 'green-screen)
-;;; green-screen-theme.el ends here
